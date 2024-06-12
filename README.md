@@ -13,7 +13,7 @@ Onion URL Finder is a Python script that generates random .onion URLs and checks
 ### Step 1: Clone the repository
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/PASSW0RDZ/OnionV3-Link-Generator.git
 cd OnionV3-Link-Generator
 ```
 
