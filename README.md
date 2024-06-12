@@ -14,7 +14,7 @@ Onion URL Finder is a Python script that generates random .onion URLs and checks
 
 ```sh
 git clone <repository-url>
-cd onion_url_finder
+cd OnionV3-Link-Generator
 ```
 
 ### Step 2: Install Tor
