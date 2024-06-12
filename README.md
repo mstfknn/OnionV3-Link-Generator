@@ -68,4 +68,4 @@ The script prints the status of each URL (whether it is accessible or not) to th
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details.
