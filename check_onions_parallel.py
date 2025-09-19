@@ -5,7 +5,7 @@ import requests
 from concurrent.futures import ThreadPoolExecutor
 
 def generate_onion_url():
-    return 'https://' + ''.join(random.choices(string.ascii_letters + string.digits, k=56)) + '.onion'
+    return 'http://' + ''.join(random.choices(string.ascii_letters + string.digits, k=56)) + '.onion'
 
 def check_onion_url(url):
     proxies = {
