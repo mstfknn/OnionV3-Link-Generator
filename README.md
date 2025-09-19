@@ -1,4 +1,3 @@
-
 # Onion URL Finder
 
 Onion URL Finder is a Python script that generates random .onion URLs and checks their accessibility using the Tor network. Accessible URLs are saved to a file.
@@ -38,24 +37,19 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the script with the following command:
+Run the script with optional command-line arguments to control its behavior:
 
 ```sh
-python3 check_onions_parallel.py
+python3 check_onions_parallel.py --limit 100 --workers 20 --timeout 10
 ```
 
-The script will generate random .onion URLs, check their accessibility via the Tor network, and save accessible URLs to the `accessible_onions.txt` file. The process will run continuously, generating and checking URLs every second.
+- `--limit`: Number of onion URLs to check before stopping (default: unlimited).
+- `--workers`: Number of parallel worker threads to use (default: 16).
+- `--timeout`: Timeout in seconds for each URL check (default: 5).
+
+The script generates and checks onion URLs based on these parameters. Results are written to `accessible_onions.txt` in a thread-safe manner using UTF-8 encoding.
 
 ## Configuration
-
-### Thread Pool Size
-
-The script uses a thread pool to check URLs in parallel. By default, it sets the number of threads to four times the number of CPU cores. You can adjust this by modifying the `max_workers` variable in the script.
-
-```python
-cpu_cores = os.cpu_count()
-max_workers = cpu_cores * 4  # Adjust based on your system's capacity
-```
 
 ### Logging
 
@@ -64,6 +58,7 @@ The script prints the status of each URL (whether it is accessible or not) to th
 ## Notes
 
 - Ensure that the Tor service is running before executing the script.
+- Random onion generation is unlikely to find real services; it is more effective to provide known onion lists for checking.
 - The script may consume significant CPU and network resources depending on the number of threads used.
 
 ## License
